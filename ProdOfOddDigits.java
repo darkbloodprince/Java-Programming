@@ -1,6 +1,6 @@
-//WAPTP Second Largest digit of a number along with the number between 111 to 333
+//WAPTP Product of odd digits of a number along with the number between m to n
 import java.util.Scanner;
-class SecondLargestDigit  
+class ProdOfOddDigits  
 {
 	public static void main(String[] args) 
 	{
@@ -14,25 +14,18 @@ class SecondLargestDigit
 		{
 			temp=i;
 			num=i;
-			int n=0;
+			int prod=1;
 			int rem=0;
-			int sl=0;
 			while (temp!=0)
 			{
 				rem=temp%10;
 				temp=temp/10;
-				if (rem>sl)
+				if (rem%2==1)
 				{
-					if (rem>n)
-					{
-						sl=n;
-						n=rem;
-					}
-					else
-						sl=rem;
+					prod=prod*rem;
 				}
 			}
-			System.out.println(sl+" - "+num);
+			System.out.println(prod+" - "+num);
 		}
 	}
 }

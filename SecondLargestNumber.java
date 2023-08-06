@@ -16,7 +16,6 @@ class SecondLargestDigit
 			num=i;
 			int n=0;
 			int rem=0;
-			int sl=0;
 			while (temp!=0)
 			{
 				rem=temp%10;
@@ -25,8 +24,8 @@ class SecondLargestDigit
 				{
 					if (rem>n)
 					{
-						sl=n;
 						n=rem;
+						sl=n;
 					}
 					else
 						sl=rem;

@@ -1,6 +1,6 @@
-//WAPTP Second Largest digit of a number along with the number between 111 to 333
+//WAPTP Sum of even digits of a number along with the number between m to n
 import java.util.Scanner;
-class SecondLargestDigit  
+class SumOfEvenDigits  
 {
 	public static void main(String[] args) 
 	{
@@ -14,25 +14,18 @@ class SecondLargestDigit
 		{
 			temp=i;
 			num=i;
-			int n=0;
+			int sum=0;
 			int rem=0;
-			int sl=0;
 			while (temp!=0)
 			{
 				rem=temp%10;
 				temp=temp/10;
-				if (rem>sl)
+				if (rem%2==0)
 				{
-					if (rem>n)
-					{
-						sl=n;
-						n=rem;
-					}
-					else
-						sl=rem;
+					sum=sum+rem;
 				}
 			}
-			System.out.println(sl+" - "+num);
+			System.out.println(sum+" - "+num);
 		}
 	}
 }
